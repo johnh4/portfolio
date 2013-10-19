@@ -1,0 +1,49 @@
+/********** GENERAL **************/
+body, html {
+	height: 100%;
+}
+body {
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-left: 150px;
+	padding-left: 150px;
+}
+/********** TOP-BAR **************/
+nav.top-bar {
+	margin-bottom: 0px;
+	//background: green;
+}
+/********** SIDEBAR **************/
+#header-offset {
+	top: 0px;
+	position: fixed;
+	background: #000;
+	height: 45px;
+	width: 150px;
+	z-index: -1;
+}
+.sidebar {
+	height: 100%;
+	width: 150px;
+	background: #000;
+	float:left;
+	position: fixed;
+	top: 45px;
+	//z-index: -1;
+	.github, .email, .twitter {
+		color: white;
+		display: block;
+		height: calc(33%);
+		height: -webkit-calc(33%);
+		a {
+			display: block;
+			height: 100%;
+			color: #fff;
+			padding-top: 100px;
+			text-align: center;
+		}
+		&:hover{
+			background: #222;
+		}
+	}
+}
