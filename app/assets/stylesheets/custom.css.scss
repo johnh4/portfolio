@@ -1,4 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,300italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300);
+@import url(http://fonts.googleapis.com/css?family=Exo:100,400,900,100italic);
+
 /********** GENERAL **************/
+$first: rgba(7,70,140,1); //navy blue
+$second: #6EE4FF; //light blue //neon blue #03FFFB;
+$third: #FF0378; //pinkish red
+$fourth: rgba(55,202,140,1); //green
+$fifth: #8400FF; //light purple //rgba(234,58,230,1); //pink
+
 body, html {
 	height: 100%;
 	width: calc(100% - 73px);
@@ -12,15 +22,53 @@ body {
 	position: fixed;
 	left: 150px;
 }
+.center {
+	text-align: center;
+}
+h4 {
+	font-family: 'Josefin Sans', Arial;
+	font-weight: 300;
+}
 /********** TOP-BAR **************/
 nav.top-bar {
-	width: calc(100% + 150px);
-	width: -webkit-calc(100% + 150px);
+	width: calc(100%);
+	width: -webkit-calc(100%);
 	margin-bottom: 0px;
-	left: -150px;
+	//left: -150px;
 	//position: fixed;
 	//background: green;
+	.center {
+		left: 50%;
+	}
 }
+.top-bar-section {
+	text-align: center;
+	.center {
+		display: inline-block;
+	}
+}
+#work-top a {
+	color: $first;
+}
+#knowledge-top a {
+	color: $second;
+}
+#about-top a {
+	color: $third;
+}
+#contact-top a {
+	//color: #FCFFA1; //light yellow
+}
+/*
+.top-bar-section li a:not(.button):hover {
+	background: green;
+}
+
+.top-bar-section ul li>a:hover {
+	background: green;
+}
+*/
+
 /********** SIDEBAR **************/
 #header-offset {
 	top: 0px;
@@ -48,23 +96,58 @@ nav.top-bar {
 			display: block;
 			height: 100%;
 			color: #fff;
-			padding-top: 100px;
+			//padding-top: 100px;
+			position: absolute;
 			text-align: center;
+			top: calc(40%);
+			top: -webkit-calc(40%);
+			left: calc(30%);
+			left: -webkit-calc(30%);
 		}
 		&:hover{
 			background: #222;
 		}
 	}
 }
+#twitter-coloring {
+	//background: rgba(85, 172, 238, 1);
+	background: #000;
+	//opacity: .5;
+	height: 100%;
+	position: relative;
+	&:hover {
+		background: rgba(85, 172, 238, 1);
+	}
+}
+#github-coloring {
+	//background: rgba(180,180,180,1);
+	background: #000;
+	height: 100%;
+	position: relative;
+	&:hover {
+		background: rgba(200,200,200,1);
+	}
+}
+#email-coloring {
+	//background: green;
+	background: #000;
+	height: 100%;
+	position: relative;
+	&:hover {
+		background: green;
+	}
+}
 /************ IMAGES ******************/
 #image-grid {
 	display: block;
-	height: calc(100% - 45px);
-	height: -webkit-calc(100% - 45px);
+	height: calc(100%);
+	height: -webkit-calc(100%);
 	width: calc(100%);
 	width: -webkit-calc(100%);
 	overflow: hidden;
 	//width: 100%;
+	//cursor: pointer;
+	position: relative;
 	.end {
 		clear: right;
 	}
@@ -72,37 +155,264 @@ nav.top-bar {
 		float: left;
 		display: block;
 		width: calc(75%);
-		width: -webkit-calc(75%);
+		width: 75%;
 		height: calc(50%);
 		height: -webkit-calc(50%);
 		overflow: hidden;
+		position: relative;
+		//margin: -25% 0 0 -25%;
+		//position: absolute;
+		//clip: rect(50px, 800px, 500px, 50px);
+		#image-doca {
+			//position: absolute;
+			//margin: -25% 0 0 -25%;
+		}
 	}
 	.image-one {
 		float: left;
 		display: block;
 		width: calc(25%);
-		width: -webkit-calc(25%);
+		width: 25%;
 		height: calc(50%);
 		height: -webkit-calc(50%);
 		overflow: hidden;
+		position: relative;
+		//border: 1px solid black;
 	}
 	.image-two {
 		float: left;
 		display: block;
 		width: calc(50%);
-		width: -webkit-calc(50%);
+		width: 50%%;
 		height: calc(50%);
 		height: -webkit-calc(50%);
-		overflow: hidden;
+		overflow: visible;
+		position: relative;
+		//border: 1px solid black;
+	}
+	.title {
+		//display: block;
+		display: none;
+		//text-align: center;
+		z-index: 2;
+		position: absolute;
+		//top: 0px;
+		//left: 0px;
+		top: calc(50%);
+		top: 50%;
+		left: calc(50%);
+		left: -webkit-calc(50%);
+		color: white;
+		text-shadow: 0 0 10px #000;
+
+	}
+	.darken {
+		display: inline-block;
+		background: black;
+		img {
+			display: block;
+			-webkit-transition: all 1s linear;
+			opacity: .6;
+		}
+		&:hover img{
+			//opacity: .4;
+		}
+	}
+	div:hover .title {
+		display: block;
+	}
+	.alter {
+		position: relative;
+		display: block;
+		background: rgba(255,255,255, 0);
+		opacity: 1;
+		height: 100%;
+		width: 100%;
+		transition: all 1s ease-in-out;
+		-webkit-transition: all 1s ease-in-out;
+	}
+	div:hover span.alter {
+		opacity: .5;
+	}
+	#project-one, .project-two {
+		//overflow: hidden;
+		//display: block;
+		//position: fixed;
+		&:hover {
+			//display: block;
+			//background: #000;
+			//opacity: .7;
+		}
+	}
+}
+/*********** DESCRIPTION *************/
+//$headline-width: -webkit-calc(width);
+.top-line {
+	//width: 100%;
+	//height: 31px;
+	//background: black;
+	.headline {
+		//height: 31px;
+		//display: inline-block;
+		background: rgba(7,70,140,1); 
+		//margin-right: 5px;
+		//color: white;	
+		//width: 300px;
+		//padding: 0px;
+		//margin: 0px;
+		h4 {
+			//display: inline-block;
+			//margin-right: 50px;
+			//width: auto;
+			//font-size: 1em;
+			color: white;
+		}
+	}
+	.break {
+		//display: inline-block;
+		//height: 31px;
+		//width: 15px;
+		height: auto;
+		width: 15px;
+		background: white;
+	}
+	.fill-block {
+		height: 32px;
+		width: 50444px;
+		background: black;
+		//float: left;
+		display: block;
+		//height: auto;
+		//width: 15px;
+		//display: inline-block;
+		//width: 50%;
+		//height: 35px;
+		//width: $headline-width;
+	}
+}
+.hl-row {
+	//background: green;
+	.hl-div {
+		display: inline-block;
+		//float: left;
+		width: 19%;
+		padding-left: 12px;
+		background: rgba(7,70,140,1);
+		h4 {
+			color: white;
+		}
+	}
+	.fill-div {
+		float: right;
+		width: 80%;
+		background: black;
+		h4 {
+			color: black;
+		}
+	}
+}
+.purpose {
+	.hl-div {
+		width: 40%;
+	}
+	.fill-div {
+		width: 59%;
+	}
+}
+.links {
+	.fill-div {
+		text-align: center;
+	}
+	.fill-div a {
+		color: white;
+		width: 100%;
+		padding-right: 10px;
+		text-align: center;
+	}
+}
+.description {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-family: 'Open Sans', 'Arial';
+}
+.site-name {
+	font-family: 'Josefin Sans', 'Arial';
+	font-weight: 400;
+	font-size: 3em;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.com {
+	font-size: 1em;
+	color: grey;
+}
+.work-description {
+	//background: url('light_wool_@2X.png');
+	//background: #C7E2FF;
+	//background: grey;
+	p, li {
+		font-family: 'Open Sans', Arial;
+		color: #444;
+	}
+	h4 {
+		display: inline;
+		font-family: 'Exo', Arial;
+		font-weight: 900;
+		//color: red;
+		//color: rgba(7,70,140,1);
+	}
+	//background: rgba(153,153,153, 1);
+	//background: grey;
+	.site-link {
+		//margin-right: 100px;
+		//margin-left: 60px;
+		display: inline-block;
+		text-align: center;
+		a {
+			color: $second;
+		}
+	}
+	.github-link {
+		float: right;
+		a {
+			margin-right: 50px;
+			color: $third;
+		}
+	}
+	ul {
+		padding-left: 19px;
 	}
 }
 
-
-
-
-
-
-
-
-
-
+/************ KNOWLEDGE *****************/
+#knowledge {
+	background: $first;//#6E6C66;
+	color: white;
+	h1 {
+		color: white;
+	}
+	ul {
+		padding-left: 19px;
+	}
+}
+/************ ABOUT ME ******************/
+#about-me {
+	background: #8400FF;
+	color: white;
+	h1 {
+		display: inline-block;
+		color: white;
+	}
+}
+/************ CONTACT *******************/
+#contact {
+	background: black;
+	color: white;
+	h1 {
+		display: inline-block;
+		color: white;
+	}
+	ul {
+		padding-left: 19px;
+	}
+}
