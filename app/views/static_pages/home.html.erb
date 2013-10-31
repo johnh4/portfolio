@@ -1,70 +1,111 @@
 <%= render 'static_pages/image_grid' %>
 
-<div class="work-description">
-	<div class="row">
-		<div class="large-6 columns">
-			<div class="site-name">thatsongtho</div><span class="com">.com</span>
+<div id="work">
+
+	<div class="work-description" id="thatsongtho-description">
+		<div class="row">
+			<div class="large-6 columns">
+				<div class="site-name">thatsongtho</div><span class="com">.herokuapp.com</span>
+			</div>
+			<div class="large-6 columns">
+			</div>
 		</div>
-		<div class="large-6 columns">
-		</div>
-	</div>
-	<div class="row">
-		<div class="large-6 columns">
-			<div class="purpose">
-				<div class="hl-row">
-					<div class="hl-div">
-						<h4>WHAT? WHY?</h4>
-					</div>
-					<div class="fill-div">
-						<h4>W</h4>
-					</div>
-				</div>
-				<!--
-				<div class="top-line">
-					<div class="large-12">
-						<div class="large-5 columns headline">
+		<div class="row">
+			<div class="large-6 columns">
+				<div class="purpose">
+					<div class="hl-row">
+						<div class="hl-div">
 							<h4>WHAT? WHY?</h4>
 						</div>
-						<div class="large-7 columns fill-block">
-							<h4></h4>
+						<div class="fill-div">
+							<h4>W</h4>
+						</div>
+					</div>
+					<p>I made this site in order to learn how to use APIs while having fun. I used the EchoNest and Rdio JavaScript APIs, and the Twitter REST API via the 'twitter' gem.</p>
+				</div>
+				<div class="site-description">
+					<p>The site aims to help users find songs that they'll like more than their current favorites, playing songs for them along the way.</p>
+				</div>
+			</div>
+			<div class="large-6 columns">
+				<div class="hl-row">
+					<div class="hl-div">
+						<h4>HOW?</h4>
+					</div>
+					<div class="fill-div"><h4>W</h4></div>
+				</div>
+				<ul class="square tech">
+					<li>Frameworks: Ruby on Rails on the back end, Zurb Foundation on the front end.</li>
+					<li>APIs: EchoNest, Rdio, Twitter.</li>
+				</ul>
+				<div class="links">
+					<div class="hl-row">
+						<div class="hl-div">
+							<h4>LINKS</h4>
+						</div>
+						<div class="fill-div">
+							<h4 class="center">
+								<span class="site-link center"><%= link_to "view site", "#" %></span>
+								<span class="github-link center"><%= link_to "github", "http://www.github.com/johnh4/that_song_tho", target: "_blank" %></span>
+								<span class="images-link center"><%= link_to "images", "#image-grid" %></span>
+							</h4>
 						</div>
 					</div>
 				</div>
-				-->
-				<p>I made this site in order to learn how to use APIs while having fun. I used the EchoNest and Rdio Javascript APIs, and the Twitter REST API via the 'twitter' gem.</p>
-			</div>
-			<div class="site-description">
-				<p>The site aims to help users find songs that they'll like more than their current favorites, playing songs for them along the way.</p>
 			</div>
 		</div>
-		<div class="large-6 columns">
-			<div class="hl-row">
-				<div class="hl-div">
-					<h4>HOW?</h4>
-				</div>
-				<div class="fill-div"><h4>W</h4></div>
+	</div>
+	<div class="work-description" id="portfolio-description">
+		<div class="row">
+			<div class="large-6 columns">
+				<div class="site-name">JOHNHOWLETT</div><span class="com">.info</span>
 			</div>
-			<ul class="square tech">
-				<li>Frameworks: Ruby on Rails on the back end, Zurb Foundation on the front end.</li>
-				<li>APIs: EchoNest, Rdio, Twitter.</li>
-			</ul>
-			<div class="links">
-				<div class="hl-row">
+			<div class="large-6 columns">
+				<div class="hl-row hide-for-small">
 					<div class="hl-div">
-						<h4>LINKS</h4>
+						<h4>HOW?</h4>
 					</div>
-					<div class="fill-div">
-						<h4 class="center">
-							<span class="site-link center"><%= link_to "view site", "#" %></span>
-							<span class="github-link center"><%= link_to "github", "http://www.github.com/johnh4/that_song_tho", target: "_blank" %></span>
-						</h4>
+					<div class="fill-div"><h4>W</h4></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-6 columns">
+				<div class="purpose">
+					<div class="hl-row">
+						<div class="hl-div">
+							<h4>WHAT? WHY?</h4>
+						</div>
+						<div class="fill-div">
+							<h4>W</h4>
+						</div>
+					</div>
+					<p>I wanted to showcase some of my work while exploring web design, so I made this site.</p>
+				</div>
+				<div class="site-description">
+				</div>
+			</div>
+			<div class="large-6 columns">
+				
+				<ul class="square tech">
+					<li>Frameworks: Ruby on Rails on the back end, Zurb Foundation on the front end.</li>
+				</ul>
+				<div class="links">
+					<div class="hl-row">
+						<div class="hl-div">
+							<h4>LINKS</h4>
+						</div>
+						<div class="fill-div">
+							<h4 class="center">
+								<span class="github-link center"><%= link_to "github", "http://www.github.com/johnh4/portfolio", target: "_blank" %></span>
+							</h4>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 <div id="knowledge">
 	<div class="row">
 		<div class="large-12 columns">
@@ -83,6 +124,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<h1>About Me</h1>
+			<p>Hi! My name is John Howlett, and I'm an aspiring web developer living in Tampa, FL. I'm looking for work in web development, and will be attending <%= link_to "Dev Bootcamp", "http://www.devbootcamp.com", target: "_blank", id: "dbc-link" %> in February 2014.</p>
 		</div>
 	</div>
 </div>
@@ -92,8 +134,8 @@
 		<div class="large-12 columns">
 			<h1>Contact</h1>
 			<ul id="contact-list" class="square">
-				<li>email: jehowl4@gmail.com</li>
-				<li>github: <%= link_to "http://www.github.com/johnh4", 
+				<li>Email: <%= link_to "jehowl4@gmail.com", "mailto:jehowl4@gmail.com" %></li>
+				<li>Github: <%= link_to "http://www.github.com/johnh4", 
 							"http://www.github.com/johnh4",	target: "_blank" %></li>
 			</ul>
 		</div>
