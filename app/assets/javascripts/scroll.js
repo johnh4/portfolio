@@ -2,7 +2,8 @@ $(document).ready(function(){
 	$('nav.top-bar').find('a').on('click', function(){
 		scrollToAnchor($(this));
 	});
-	$('#image-grid a').on('click', function(){
+	//$('#image-grid a').on('click', function(){
+	$('.click-to-scroll a').on('click', function(){
 		scrollToAnchor($(this));
 	});
 	$('.images-link a').on('click', function(){
