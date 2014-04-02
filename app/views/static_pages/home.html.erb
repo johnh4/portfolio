@@ -1,3 +1,64 @@
+<a href="#work-twitter">
+	<div id="twitter-image-container">
+	</div>
+</a>
+
+<div id="work-twitter">
+	<div class="work-description" id="thatsongtho-description">
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="site-name">twee-d .herokuapp</div><span class="com">.com</span>
+			</div>
+			<div class="large-6 columns">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-6 columns">
+				<div class="purpose">
+					<div class="hl-row">
+						<div class="hl-div">
+							<h4>WHAT? WHY?</h4>
+						</div>
+						<div class="fill-div">
+							<h4>W</h4>
+						</div>
+					</div>
+					<p>I wanted to make a site that pulls tweets from Twitter's Streaming API in real time, and displays them in a different way. I used it as an opportunity to learn three.js, adapting code from <%= link_to "this demo", "http://threejs.org/examples/css3d_periodictable.html" %>.</p>
+				</div>
+				<div class="site-description">
+					<p>The site gets the top 10 trending topics from Twitter, and as matching tweets are made it models them as cards in 3d space.</p>
+				</div>
+			</div>
+			<div class="large-6 columns">
+				<div class="hl-row">
+					<div class="hl-div">
+						<h4>HOW?</h4>
+					</div>
+					<div class="fill-div"><h4>W</h4></div>
+				</div>
+				<ul class="square tech">
+					<li>Frameworks: Node/Express with MongoDB. Bootstrap.</li>
+					<li>APIs: Twitter (REST and Streaming).</li>
+				</ul>
+				<div class="links">
+					<div class="hl-row">
+						<div class="hl-div">
+							<h4>LINKS</h4>
+						</div>
+						<div class="fill-div">
+							<h4 class="center">
+								<span class="site-link center"><%= link_to "view site", "http://agile-caverns-7904.herokuapp.com/", target: "_blank" %></span>
+								<span class="github-link center"><%= link_to "github", "http://www.github.com/johnh4/node_twitter_wall", target: "_blank" %></span>
+								<span class="images-link center"><%= link_to "images", "#image-grid" %></span>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <%= render 'static_pages/image_grid' %>
 
 <div id="work">
