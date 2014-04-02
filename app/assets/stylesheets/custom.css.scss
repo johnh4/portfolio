@@ -132,7 +132,7 @@ nav.top-bar {
 	height: 100%;
 	position: relative;
 	&:hover {
-		background: green;
+		background: $fourth;
 	}
 }
 /************ IMAGES ******************/
@@ -372,6 +372,9 @@ nav.top-bar {
 }
 #portfolio-description {
 	margin-bottom: 30px;
+}
+#twitter-site-name, #thatsongtho-site-name {
+	text-align: center;
 }
 
 /************ KNOWLEDGE *****************/
